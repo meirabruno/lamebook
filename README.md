@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Lamebook é a implementação simples do Twitter, onde usuários podem criar seus posts e curtir.
 
-Things you may want to cover:
+## Requisitos
 
-* Ruby version
+* Ruby 3.1.0
+* Rails 7.0.3
+* PostgreSQL 14.1
 
-* System dependencies
+## Como rodar
 
-* Configuration
+- Clone o projeto;
+- Instalar versões do Ruby, Rails e PostgreSQL definidas nos Requisitos, recomendo utilizar o rvm para instalar o Ruby e o Rails;
+(https://www.treinaweb.com.br/blog/gerenciar-versoes-do-ruby-com-rvm) Post é antigo mas vale a leitura :P
 
-* Database creation
+- Rodar o bundle install;
+- Rodar o rails db:create;
+- Rodar o rails db:migrate;
+- Rodar o rails s;
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pronto já pode ser usado.
