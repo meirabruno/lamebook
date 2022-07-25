@@ -17,7 +17,7 @@
         <%= link_to "Lamebook", root_path, class: "navbar-brand" %>
         <div class="d-flex">
           <% if user_signed_in? %>
-            <%= link_to "Sair", destroy_user_session_path, class: "btn btn-primary me-2" %>
+            <%= link_to "Sair", destroy_user_session_path, class: "btn btn-primary" %>
           <% else %>
             <%= link_to "Entrar", new_user_session_path, class: "btn btn-primary me-2" %>
             <%= link_to "Cadastre-se", new_user_registration_path, class: "btn btn-success" %>
@@ -25,6 +25,15 @@
         </div>
       </div>
     </nav>
-    <%= yield %>
+    <main>
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+            <%= value %>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
